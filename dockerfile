@@ -1,7 +1,7 @@
-FROM nginx:latest
+FROM python:latest
 
-LABEL maintainer="anjalichawla134@gmail.com"
+LABEL maintainer = "anjalichawla134@gmail.com"
 
-WORKDIR /usr/share/nginx/html
+ADD prg.py /
 
-COPY index.ntml index.html
+CMD [ "python" , "./prg.py" ]
